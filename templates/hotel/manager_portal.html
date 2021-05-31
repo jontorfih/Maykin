@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block content %}
+  <h2>All the hotels in {{ city.cityName }}</h2>
+  <a href="new/" class = "btn btn-default" id = "">Create new hotel</a>
+  <ul id = "list-hotel">
+    {% for data in data %}
+    <li>{{ data.hotelName }}</li>
+    <a href="update/{{ data.hotelCode }}" class = "btn btn-warning" id = "">edit</a>
+    <a href="delete/{{ data.hotelCode }}" class = "btn btn-danger" id = "">delete</a>
+    {% endfor %}
+  </ul>     
+{% endblock %}

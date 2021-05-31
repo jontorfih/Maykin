@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{% block content %}
+  <h2>All the hotels in {{ city.cityName }}</h2>
+  <ul id = "list-hotel">
+    {% for data in data %}
+    <li>{{ data.hotelName }}</li>
+    {% endfor %}
+  </ul>     
+{% endblock %}

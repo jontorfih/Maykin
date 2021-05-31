@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block content %}
+  <h2>hotels by cites</h2>
+
+  <form class ="mt-5" id ="hotel-form">
+    {% csrf_token %}
+    <div class="ui selection dropdown" id="citys">
+      <input type="hidden" name="citys">
+      <i class="dropdown icon"></i>
+      <div class="default text">Choose a city</div>
+      <div class="menu" id="citys-data-box">
+      </div>
+    </div>
+
+    <div class="ui selection dropdown" id="hotels">
+      <input type="hidden" name="hotel">
+      <i class="dropdown icon"></i>
+      <div class="default text" id="hotel-text">Choose a hotel</div>
+      <div class="menu" id="hotel-data-box">
+      </div>
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<body>
+    <div class="container">
+      <h1>Manger login</h1>   
+      <h1></h1>   
+          <div id ="login-form" class="login">
+              <form method="post" action="/login/">
+                  {% csrf_token %}
+                  <div class="form-group">
+                      <div class="form-label-group">
+                          <legend>Username</legend>
+                          {{ form.username }}
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="form-label-group">
+                          <legend>Password</legend>
+                          {{ form.password }}
+                      </div>
+                  </div>
+                  <button class="btn btn-primary btn-block" type="submit">Login</button>
+              </form>
+          </div>
+      </div>
+    </main>
+  </body>
+{% endblock %}
